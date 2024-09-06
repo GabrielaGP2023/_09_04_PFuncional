@@ -8,6 +8,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 public class Producto {
-    String nombre;
-    double precio;
+	//1. Atributos
+	private int idProducto;
+	private String nombreProducto;
+	private double precio;
+	private int unidadesExistencia;
+	private int categoria;
+	//2. Métodos
+
+	
+
+
+
+
+
 }

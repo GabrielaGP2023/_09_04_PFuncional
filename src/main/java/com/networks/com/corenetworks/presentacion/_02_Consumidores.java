@@ -1,6 +1,6 @@
 package com.networks.com.corenetworks.presentacion;
 
-import com.networks.modelo.Producto;
+import com.networks.modelo.ProductoIF;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -18,8 +18,8 @@ public class _02_Consumidores {
                 System.out.println("Número: " + numero + ", Cuadrado: " + (numero * numero));
 
 
-        Consumer<Producto> imprimirDetallesProducto = producto ->
-                System.out.println(producto);
+        Consumer<ProductoIF> imprimirDetallesProducto = productoIF ->
+                System.out.println(productoIF);
 
 //        // Consumidor para mostrar un mensaje en un cuadro de diálogo (simulado con un print en consola)
 //        Consumer<String> mostrarMensajeDialogo = mensaje ->
@@ -49,8 +49,8 @@ public class _02_Consumidores {
         // Ejemplos de uso
         imprimirEnMayusculas.accept("hola mundo"); // "HOLA MUNDO"
         imprimirNumeroYCuadrado.accept(5); // "Número: 5, Cuadrado: 25"
-        Producto producto = new Producto("Laptop", 1500.00);
-        imprimirDetallesProducto.accept(producto); // "Producto{nombre='Laptop', precio=1500.0}"
+        ProductoIF productoIF = new ProductoIF("Laptop", 1500.00);
+        imprimirDetallesProducto.accept(productoIF); // "Producto{nombre='Laptop', precio=1500.0}"
 //        mostrarMensajeDialogo.accept("Error de conexión"); // "Cuadro de diálogo: Error de conexión"
         escribirEnArchivoDeRegistro.accept("Usuario se ha desconectado"); // "Registro: Usuario se ha desconectado"
 
